@@ -89,6 +89,66 @@
         .block-separator {
             margin-top: 40px; /* Espaciado doble entre bloques */
         }
+
+
+
+    /* MEDIA QUERY para dispositivos móviles */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .left-section {
+            width: 100%;
+            padding: 10px;
+            padding-top: 10px;
+        }
+
+        .left-section a {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        .middle-section {
+            display: none;
+        }
+
+        .right-section {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        .right-section img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+
+
+    /* Forzar la visualización vertical en móvil */
+
+   @media (max-width: 768px) and (orientation: landscape) {
+       html {
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        width: 100vh;
+        height: 100vw;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    body {
+        transform: rotate(90deg);
+        transform-origin: center center;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+
     </style>
 </head>
 <body>
