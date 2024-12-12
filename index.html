@@ -134,7 +134,7 @@
     @media (max-width: 768px) {
 
         html {
-                font-size: 2vw; /* Ajuste base para pantallas pequeñas */
+                font-size: 4vw; /* Ajuste base para pantallas pequeñas */
             }
 
         .container {
@@ -142,14 +142,19 @@
             height: auto;
         }
 
-        .left-section {
+/*        .left-section {
             width: 100%;
             padding: 10px;
-        }
+        }  */
+
+    .left-section .text-container {
+        top: 15%; /* Baja el texto para que no quede tan arriba */
+        padding: 0 20px; /* Reduce el padding lateral en móviles */
+
 
         .left-section a {
-            font-size: 1.2rem;
-            line-height: 1.4;
+            font-size: 1.8rem;
+            line-height: 1.6;
         }
 
         .middle-section {
@@ -157,10 +162,14 @@
         }
 
         .right-section {
-            width: 100%;
+        top: 25%; /* Baja la sección derecha para que no quede pegada arriba */
+        height: 75%; /* Ajusta su altura para que no ocupe toda la pantalla */
+
+
+    /*        width: 100%;
             padding: 10px;
-            font-size: 1rem;
-        }
+            font-size: 1rem;      */
+        }                    
 
         .right-section img {
             max-width: 100%;
@@ -170,7 +179,7 @@
 
 
 
-    /* Forzar la visualización vertical en móvil */
+    /* Forzar la visualización vertical en móvil 
 
    @media (max-width: 768px) and (orientation: landscape) {
        html {
@@ -189,6 +198,8 @@
         height: 100vh;
     }
 }
+
+*/
 
 
     </style>
