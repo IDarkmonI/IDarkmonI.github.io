@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>EL BUCLE</title>
+    <title>Mi Proyecto</title>
     <style>
 
        /* Tamaño base flexible en html */
@@ -138,15 +138,9 @@
             }
 
         .container {
-            flex-direction: column; /* Apila las secciones verticalmente */
+            flex-direction: column;
             height: auto;
         }
-
-
-            /* Oculta la sección central */
-            .middle-section {
-                display: none; /* Desaparece en móviles */
-            }
 
 /*        .left-section {
             width: 100%;
@@ -163,24 +157,23 @@
             line-height: 1.6;
         }
 
-            /* Oculta la sección central */
-            .middle-section {
-                display: none; /* Desaparece en móviles */
-            }
+        .middle-section {
+            display: none;
+        }
 
         .right-section {
-        position: relative; /* Pasa a estar debajo de la sección izquierda */
+        top: 25%; /* Baja la sección derecha para que no quede pegada arriba */
+        height: 75%; /* Ajusta su altura para que no ocupe toda la pantalla */
 
-            width: 100%; /* Ocupa todo el ancho */
-                top: 0; /* Elimina desplazamiento vertical */
-                height: auto; /* Ajusta la altura al contenido */
-            padding: 5px;
-            font-size: 1rem;      
+
+    /*        width: 100%;
+            padding: 10px;
+            font-size: 1rem;      */
         }                    
 
         .right-section img {
             max-width: 100%;
-            height: auto;        
+            height: auto;
         }
     }
 
