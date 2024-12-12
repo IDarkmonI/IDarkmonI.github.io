@@ -36,7 +36,7 @@
         .left-section {
             width: 33%;
             padding: 20px;
-            padding-top: 200px; /* Baja el texto */
+            padding-top: 250px; /* Baja el texto */
             padding-left: 40px; /* Añade sangría al texto */
             background: transparent; /* Totalmente transparente */
         }
@@ -53,6 +53,15 @@
             font-weight: bold;
             display: block;
             line-height: 1.5;
+        text-shadow:         /*Bordes del texto */
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -1px  1px 0 #000,  
+         1px  1px 0 #000,
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,  
+        -2px  2px 0 #000,  
+         2px  2px 0 #000;
         }
 
         .left-section a span {
@@ -81,6 +90,17 @@
         a {
             color: white;
             text-decoration: none;
+
+        .text-with-border {    /* Texto con bordes */
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 
+                -1px -1px 0 #000,  
+                 1px -1px 0 #000,  
+                 -1px  1px 0 #000,  
+                  1px  1px 0 #000;
+        }
         }
 
         a:hover {
