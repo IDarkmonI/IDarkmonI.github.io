@@ -129,38 +129,85 @@
 
 
 
-   /* MEDIA QUERY para dispositivos móviles */
-@media (max-width: 768px) {
+    /* MEDIA QUERY para dispositivos móviles */
+    @media (max-width: 768px) {
 
-    html {
-        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+        html {
+                font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+            }
+
+        .container {
+            flex-direction: column; /* Apila las secciones verticalmente */
+            height: auto;
+        }
+
+
+            /* Oculta la sección central */
+            .middle-section {
+                display: none; /* Desaparece en móviles */
+            }
+
+/*        .left-section {
+            width: 100%;
+            padding: 10px;
+        }  */
+
+/*    .left-section .text-container {
+        top: 15%; /* Baja el texto para que no quede tan arriba */
+        padding: 0 20px; /* Reduce el padding lateral en móviles */
+
+
+        .left-section a {
+            font-size: 1.8rem;
+            line-height: 1.6;
+        }   */
+
+            /* Oculta la sección central */
+            .middle-section {
+                display: none; /* Desaparece en móviles */
+            }
+
+        .right-section {
+        position: relative; /* Pasa a estar debajo de la sección izquierda */
+
+            width: 100%; /* Ocupa todo el ancho */
+                top: auto; /* Elimina desplazamiento vertical */
+                height: auto; /* Ajusta la altura al contenido */
+           margin-top: 20px; /* Añade separación con la sección de arriba */
+      /*    padding: 5px;   */
+            font-size: 1rem; 
+            z-index: 0;     
+        }                    
+
+        .right-section img {
+            max-width: 100%;
+            height: auto;        
+        }
     }
 
-    .container {
-        display: flex;
-        flex-direction: column; /* Apila las secciones verticalmente */
-        height: auto;
+
+
+    /* Forzar la visualización vertical en móvil 
+
+   @media (max-width: 768px) and (orientation: landscape) {
+       html {
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        width: 100vh;
+        height: 100vw;
+        overflow: hidden;
+        position: absolute;
     }
 
-    /* Oculta la sección central */
-    .middle-section {
-        display: none; /* Desaparece en móviles */
-    }
-
-    .left-section {
-        width: 100%; /* Asegura que ocupe todo el ancho */
-        margin-bottom: 20px; /* Añade espacio debajo de la sección 1 */
-    }
-
-    .right-section {
-        position: static; /* Cambia de absoluto a relativo */
-        width: 100%; /* Ocupa todo el ancho */
-        height: auto; /* Ajusta la altura al contenido */
-        margin-top: 0px; /* Añade separación con la sección de arriba */
-        padding: 10px; /* Espacio interno */
-        font-size: 1rem; /* Ajusta el tamaño del texto */
+    body {
+        transform: rotate(90deg);
+        transform-origin: center center;
+        width: 100vw;
+        height: 100vh;
     }
 }
+
+*/
 
 
     </style>
