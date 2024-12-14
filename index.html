@@ -142,27 +142,6 @@
 
 
 
-/* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
-@media (max-width: 1024px) and (orientation: landscape) {
-    .left-section a {
-        font-size: 1rem; /* Reduce el tamaño de las letras */
-/*        line-height: 1.2; /* Ajusta el espacio entre líneas si es necesario */  */
-    }
-
-
-.left-section a span {
-    font-size: 0.8rem; /* Tamaño reducido para el texto secundario */
-    font-style: italic;
-    }
-
-
-/*    .left-section .text-container {
-        padding: 0 10px; /* Ajusta los márgenes laterales */
-    }   */
-  }
-
-
-
 /* MEDIA QUERY para dispositivos móviles */
 @media (max-width: 768px) {
 
@@ -203,14 +182,28 @@
         z-index: auto; /* Evita interferencias con otras secciones */
     }
 
+    /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
+    @media (orientation: landscape) {
+        .left-section a {
+        font-size: 1rem; /* Reduce el tamaño de las letras */
+      }
+
+    .left-section a span {
+        font-size: 0.8rem; /* Tamaño reducido para el texto secundario */
+        font-style: italic;
+      }
+
+    }
+
   } /* Fin query para móviles */
+
+
 
  /*   .background {
         background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
         background-size: cover; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
     } */
-
 
 
 
@@ -227,6 +220,8 @@
 
 </style>
 </head>
+
+
 <body>
     <!-- Fondo -->
     <div class="background"></div>
