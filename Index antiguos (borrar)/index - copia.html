@@ -129,6 +129,8 @@
 
 
 
+/* DISPOSITIVOS MÓVILES */
+
 /* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
 @media (max-width: 1024px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {     
     .background {
@@ -137,7 +139,6 @@
         background-position: center; /* Centra la imagen */
      }
   }
-
 
 
 
@@ -181,15 +182,28 @@
         z-index: auto; /* Evita interferencias con otras secciones */
     }
 
+    /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
+    @media (orientation: landscape) {
+        .left-section a {
+        font-size: 0.8rem; /* Reduce el tamaño de las letras */
+      }
+
+    .left-section a span {
+        font-size: 0.5rem; /* Tamaño reducido para el texto secundario */
+        font-style: italic;
+      }
+
+    }
+
   } /* Fin query para móviles */
+
+
 
  /*   .background {
         background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
         background-size: cover; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
     } */
-
-
 
 
 
@@ -206,6 +220,8 @@
 
 </style>
 </head>
+
+
 <body>
     <!-- Fondo -->
     <div class="background"></div>
@@ -243,6 +259,7 @@
                 <p>En este recurrente disparate, todos son Sísifo y la muerte acecha de infinitas formas. Pero salvar el pellejo no basta: el Triunvirato, los diseñadores del Bucle, con su pequeño experimento han puesto en peligro la misma existencia. Así que te impones hallarlos a todos y detener esta locura, hurgar en sus secretos y romper el Bucle. Te toca salvar el universo. Algo que quizá le venga grande a quien no recuerda ni la talla de sus calzoncillos.</p>    `;
             } else if (seccion === 'texto2') {
                 textoDiv.innerHTML = `
+                <div style="font-size: 1rem;">
                 <p>Este delirante librojuego de investigación en el que tú eres el protagonista ofrece:</p>
                 <ul>
                     <li>Un inconfundible sabor a clásico, pero con mecánicas innovadoras y un febril diseño.</li>
