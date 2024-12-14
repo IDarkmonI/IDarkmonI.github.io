@@ -170,13 +170,23 @@
     }
 
 
+ /*   .background {
+        background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
+        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+    } */
+
+
+}
+
+
+/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
+@media (max-width: 768px) and (orientation: portrait) {
     .background {
         background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
         background-size: cover; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
-    }
-
-
+     }
 }
 
 
@@ -186,29 +196,6 @@
                 font-size: 0.76em; !important; /* Reduce todo un 8% manteniendo proporciones */
             }
         }
-
-
-
-@media (max-width: 768px) and (orientation: landscape) {
-    html {
-        transform: rotate(-90deg); /* Rota la pantalla */
-        transform-origin: center center; /* Centra la rotación */
-        width: 100vh; /* Altura del viewport como ancho */
-        height: 100vw; /* Ancho del viewport como altura */
-        overflow: hidden; /* Evita desplazamientos indeseados */
-        position: fixed; /* Mantén todo fijo */
-    }
-
-    body {
-        transform: rotate(90deg); /* Corrige el contenido */
-        transform-origin: center center;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
-}
-
-
 
 
 </style>
