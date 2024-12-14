@@ -129,6 +129,18 @@
 
 
 
+/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
+@media (max-width: 1024px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+    .background {
+        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
+        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+     }
+  }
+
+
+
+
 /* MEDIA QUERY para dispositivos móviles */
 @media (max-width: 768px) {
 
@@ -169,6 +181,7 @@
         z-index: auto; /* Evita interferencias con otras secciones */
     }
 
+  } /* Fin query para móviles */
 
  /*   .background {
         background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
@@ -177,25 +190,18 @@
     } */
 
 
-}
 
-
-/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
-@media (max-width: 768px) and (orientation: portrait) {
-    body {
-        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: cover; /* Escala para cubrir toda la pantalla */
-        background-position: center; /* Centra la imagen */
-     }
-}
 
 
    /* Ajuste para pantallas grandes (ordenadores) */
-        @media (min-width: 769px) {
+        @media (min-width: 1024px) {
             .right-section {
                 font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
-        }
+
+    }
+
+}
 
 
 </style>
@@ -262,7 +268,7 @@
                 </ul>`;
             } else if (seccion === 'texto4') {
                 textoDiv.innerHTML = `
-                <div style="font-size: 1rem;">
+                <div style="font-size: 0.8rem;">
                 <p><strong><em>El perpetrador</em></strong></p>
                 <p><b>Ramón Merino Collado</b>, incondicional devoto de la narrativa del asombro, es un escritor con varios libros publicados: <em>El teatro de los prodigios</em> (Grupo Ajec, 2012), <em>De monstruos y trincheras</em> (Espiral, 2014) y <em>Memorias Paganas</em> (Sur, 2017). Perteneció a la célebre asociación Nocte, en cuyo seno fue antologista y coautor de <em>Kaiju</em> (Saco de Huesos, 2019). También ha sido galardonado con varios premios literarios, como el Castillejo Benigno-Vaquero o el Palabras Agudas, y sus libros han cosechado un total de cuatro nominaciones a los prestigiosos Ignotus. El Bucle es su primer librojuego, y lo ha pasado tan bien diseñándolo que amenaza con perpetrar algunos más.</p>
                 <p><strong><em>Los compinches</em></strong></p>
