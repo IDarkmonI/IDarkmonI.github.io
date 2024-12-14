@@ -129,8 +129,7 @@
 
 
 
- /* MEDIA QUERY para dispositivos móviles */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
 
     html {
         font-size: 4vw; /* Ajuste base para pantallas pequeñas */
@@ -147,20 +146,20 @@
     }
 
     .left-section {
-        width: 100%; /* Ocupa todo el ancho */
-        margin-bottom: 20px; /* Añade espacio debajo de la sección 1 */
-        position: relative; /* Evita problemas de flujo */
-        z-index: auto; /* Usa el orden natural */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        margin-bottom: 20px; /* Espacio claro debajo de la sección 1 */
+        position: static; /* Usa el flujo natural */
+        z-index: 1; /* Asegura que esté por encima */
     }
 
     .right-section {
         width: 100%; /* Ocupa todo el ancho */
         height: auto; /* Ajusta la altura al contenido */
-        margin-top: 0; /* Evita márgenes innecesarios */
+        margin-top: 20px; /* Asegura separación suficiente */
         padding: 10px; /* Espacio interno */
         font-size: 1rem; /* Ajusta el tamaño del texto */
-        position: relative; /* Permite que siga el flujo natural */
-        z-index: auto; /* Evita conflictos */
+        position: static; /* Elimina cualquier posicionamiento explícito */
+        z-index: 0; /* Garantiza que no interfiera con la sección 1 */
     }
 }
 
