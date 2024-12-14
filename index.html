@@ -129,6 +129,18 @@
 
 
 
+/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
+@media (max-aspect-ratio: 1/1) {    /* (max-width: 1024px) and (orientation: portrait) and */
+    body {
+        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
+        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+     }
+  }
+
+
+
+
 /* MEDIA QUERY para dispositivos móviles */
 @media (max-width: 768px) {
 
@@ -179,14 +191,6 @@
 
 
 
-/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
-@media (max-aspect-ratio: 1/1) {    /* (max-width: 1024px) and (orientation: portrait) and */
-    body {
-        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: cover; /* Escala para cubrir toda la pantalla */
-        background-position: center; /* Centra la imagen */
-     }
-  }
 
 
    /* Ajuste para pantallas grandes (ordenadores) */
