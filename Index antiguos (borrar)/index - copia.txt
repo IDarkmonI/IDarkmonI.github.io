@@ -129,7 +129,7 @@
 
 
 
-   /* MEDIA QUERY para dispositivos móviles */
+/* MEDIA QUERY para dispositivos móviles */
 @media (max-width: 768px) {
 
     html {
@@ -139,31 +139,47 @@
     .container {
         display: flex;
         flex-direction: column; /* Apila las secciones verticalmente */
-        height: auto;
+        height: auto; /* Ajusta la altura según el contenido */
     }
 
-    /* Oculta la sección central */
     .middle-section {
-        display: none; /* Desaparece en móviles */
+        display: none; /* Oculta la sección central */
     }
 
     .left-section {
-        width: 100%; /* Asegura que ocupe todo el ancho */
-        margin-bottom: 20px; /* Añade espacio debajo de la sección 1 */
+        width: 100%; /* Ocupa todo el ancho */
+        margin-bottom: 20px; /* Espacio claro debajo de la sección 1 */
+        position: relative; /* Asegura que siga el flujo natural */
+        z-index: 1; /* Asegura que esté encima de cualquier fondo */
+    }
+
+    .left-section .text-container {
+        position: static; /* Elimina el posicionamiento absoluto */
+        top: auto; /* Deja que siga el flujo natural */
+        padding: 0 20px; /* Ajusta el espaciado lateral */
     }
 
     .right-section {
-        position: static; /* Cambia de absoluto a relativo */
         width: 100%; /* Ocupa todo el ancho */
-        height: auto; /* Ajusta la altura al contenido */
-        margin-top: 0px; /* Añade separación con la sección de arriba */
+        height: auto; /* Ajusta la altura según el contenido */
+        margin-top: 20px; /* Asegura separación debajo de la sección 1 */
         padding: 10px; /* Espacio interno */
         font-size: 1rem; /* Ajusta el tamaño del texto */
+        position: relative; /* Asegura que siga el flujo natural */
+        z-index: auto; /* Evita interferencias con otras secciones */
     }
 }
 
 
-    </style>
+   /* Ajuste para pantallas grandes (ordenadores) */
+        @media (min-width: 769px) {
+            .right-section {
+                font-size: 0.72em; !important; /* Reduce todo un 8% manteniendo proporciones */
+            }
+        }
+
+
+</style>
 </head>
 <body>
     <!-- Fondo -->
@@ -215,6 +231,7 @@
                 </ul>`;
             } else if (seccion === 'texto3') {
                 textoDiv.innerHTML = `
+               <div style="font-size: 1.5rem;">
                 <br>
                 <h2>Material adicional</h2>
                 <ul>

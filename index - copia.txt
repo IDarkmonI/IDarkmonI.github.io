@@ -168,13 +168,32 @@
         position: relative; /* Asegura que siga el flujo natural */
         z-index: auto; /* Evita interferencias con otras secciones */
     }
+
+
+ /*   .background {
+        background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
+        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+    } */
+
+
+}
+
+
+/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
+        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+     }
 }
 
 
    /* Ajuste para pantallas grandes (ordenadores) */
         @media (min-width: 769px) {
             .right-section {
-                font-size: 0.72em; !important; /* Reduce todo un 8% manteniendo proporciones */
+                font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
         }
 
@@ -231,7 +250,7 @@
                 </ul>`;
             } else if (seccion === 'texto3') {
                 textoDiv.innerHTML = `
-               <div style="font-size: 1.5rem;">
+               <div style="font-size: 1.2rem;">
                 <br>
                 <h2>Material adicional</h2>
                 <ul>
