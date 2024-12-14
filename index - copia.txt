@@ -201,15 +201,14 @@
         
     html {
         font-size: 4vw; /* Ajuste base para pantallas pequeñas */
-      }
+    }
 
 
     .left-section .text-container {
-    /*  position: static; /* Elimina el posicionamiento absoluto */
+   /*   position: static; /* Elimina el posicionamiento absoluto */
         top: auto; /* Deja que siga el flujo natural */
         padding: 0 20px; /* Ajusta el espaciado lateral */    */
         padding-top: 13%; /* Espaciado superior como porcentaje de la altura del contenedor */
-     }
 
     .left-section a {
         font-size: 0.1rem !important; /* Reduce el tamaño de las letras */
@@ -228,10 +227,10 @@
     }
 
 
-   } /* FIN orientación horizontal */
+    } /* FIN orientación horizontal */
 
 
-} /* Fin query para móviles */
+  } /* Fin query para móviles */
 
 
 
