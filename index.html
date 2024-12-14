@@ -182,8 +182,8 @@
 
 /* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
 @media (max-width: 768px) and (orientation: portrait) {
-    .background {
-        background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
+    body {
+        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
         background-size: cover; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
      }
@@ -193,7 +193,7 @@
    /* Ajuste para pantallas grandes (ordenadores) */
         @media (min-width: 769px) {
             .right-section {
-                font-size: 0.72em; !important; /* Reduce todo un 8% manteniendo proporciones */
+                font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
         }
 
