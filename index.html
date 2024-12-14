@@ -197,7 +197,7 @@
 
 
     /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
-    @media (orientation: landscape) {
+    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
         
     html {
         font-size: 4vw; /* Ajuste base para pantallas pequeñas */
