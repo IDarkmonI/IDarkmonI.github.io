@@ -129,7 +129,7 @@
 
 
 
- /* MEDIA QUERY para dispositivos móviles */
+/* MEDIA QUERY para dispositivos móviles */
 @media (max-width: 768px) {
 
     html {
@@ -148,19 +148,25 @@
 
     .left-section {
         width: 100%; /* Ocupa todo el ancho */
-        margin-bottom: 20px; /* Añade espacio debajo de la sección 1 */
-        position: relative; /* Evita problemas de flujo */
-        z-index: auto; /* Usa el orden natural */
+        margin-bottom: 20px; /* Espacio claro debajo de la sección 1 */
+        position: relative; /* Asegura que siga el flujo natural */
+        z-index: 1; /* Asegura que esté encima de cualquier fondo */
+    }
+
+    .left-section .text-container {
+        position: static; /* Elimina el posicionamiento absoluto */
+        top: auto; /* Deja que siga el flujo natural */
+        padding: 0 20px; /* Ajusta el espaciado lateral */
     }
 
     .right-section {
         width: 100%; /* Ocupa todo el ancho */
-        height: auto; /* Ajusta la altura al contenido */
-        margin-top: 0; /* Evita márgenes innecesarios */
+        height: auto; /* Ajusta la altura según el contenido */
+        margin-top: 20px; /* Asegura separación debajo de la sección 1 */
         padding: 10px; /* Espacio interno */
         font-size: 1rem; /* Ajusta el tamaño del texto */
-        position: relative; /* Permite que siga el flujo natural */
-        z-index: auto; /* Evita conflictos */
+        position: relative; /* Asegura que siga el flujo natural */
+        z-index: auto; /* Evita interferencias con otras secciones */
     }
 }
 
