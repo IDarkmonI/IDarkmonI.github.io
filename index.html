@@ -208,7 +208,7 @@
         position: static; /* Elimina el posicionamiento absoluto */
         top: auto; /* Deja que siga el flujo natural */
         padding: 0 20px; /* Ajusta el espaciado lateral */    
-        padding-top: 22% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        padding-top: 30% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
      }
 
     .left-section a {
@@ -225,6 +225,8 @@
     .right-section {
         font-size: 0.4rem !important; /* Sobrescribe cualquier tamaño definido posteriormente */
         inherit: none;
+        white-space: normal; /* Asegura que no haya limitaciones */
+        overflow: visible; /* Previene problemas de corte */
     }
 
 
