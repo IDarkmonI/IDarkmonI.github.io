@@ -131,19 +131,18 @@
 
 /* DISPOSITIVOS MÓVILES */
 
-/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
-@media (max-width: 1024px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+/* Formato solo en dispositivos móviles */
+@media (max-width: 1024px) {     
+
+
+ /* Formato de móvil solo si lo sujetas en posición vertical */
+  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
         background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
      }
-/*  }
-
-
-
-/* MEDIA QUERY para dispositivos móviles */
-@media (max-width: 768px) {  */
 
     html {
         font-size: 4vw; /* Ajuste base para pantallas pequeñas */
@@ -184,19 +183,16 @@
     }
 
 
-
-
-        .left-section a {
-        font-size: 1.5rem; /* Reduce el tamaño de las letras */
+      .left-section a {
+        font-size: 2.5rem; /* Reduce el tamaño de las letras */
       }
 
-    .left-section a span {
-        font-size: 1.4rem; /* Tamaño reducido para el texto secundario */
+      .left-section a span {
+        font-size: 2.4rem; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
-
-
+   } /* Fin orientación vertical */
 
 
 
