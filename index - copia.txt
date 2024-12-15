@@ -44,7 +44,7 @@
 
         /* Primera parte: sección izquierda */
         .left-section .text-container {
-            position: absolute;
+            position: fixed;
             top: 25%; /* Cambia este porcentaje para ajustar la altura inicial */
             left: 0;
             right: 0;
@@ -223,10 +223,10 @@
 
 
     .left-section .text-container {
-        position: static; /* Elimina el posicionamiento absoluto */
-        top: auto; /* Deja que siga el flujo natural */
-        padding: 0 20px; /* Ajusta el espaciado lateral */    
-        padding-top: 25% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        position: fixed; /* Elimina el posicionamiento absoluto */
+ /*       top: auto; /* Deja que siga el flujo natural */   */
+        padding: 0 10px; /* Ajusta el espaciado lateral */    
+        padding-top: 0% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
      }
 
     .left-section a {
