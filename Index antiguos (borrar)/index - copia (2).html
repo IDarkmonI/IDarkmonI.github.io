@@ -2,10 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Mi Proyecto</title>
+    <title>EL BUCLE</title>
     <style>
 
        /* Tamaño base flexible en html */
@@ -20,6 +19,8 @@
             color: white;
             font-size: 1.6rem; /* Escala relativa al tamaño base */
         }
+
+
 
         /* Fondo con imagen */
         .background {
@@ -100,7 +101,24 @@
            top: 0; /* Empieza desde el borde superior del contenedor */
            right: 0; /* Se alinea al borde derecho */
            height: 100%; /* Ocupa toda la altura de la pantalla */
+
+
+        /* Tamaños de texto empleados posteriormente en la sección derecha */
+        .texto-dinamico-10 {
+           font-size: 1rem;
         }
+
+        .texto-dinamico-12 {
+           font-size: 1.2rem;
+        }
+
+        .texto-dinamico-09 {
+           font-size: 0.9rem;
+        }
+
+      }  /* FIN right-section */
+
+
 
         /* Estilo de enlaces */
         a {
@@ -130,69 +148,142 @@
 
 
 
-    /* MEDIA QUERY para dispositivos móviles */
-    @media (max-width: 768px) {
+/* DISPOSITIVOS MÓVILES */
 
-        html {
-                font-size: 2vw; /* Ajuste base para pantallas pequeñas */
+/* Formato solo en dispositivos móviles */
+@media (max-width: 1024px) {     
+
+
+ /* Formato de móvil solo si lo sujetas en posición VERTICAL */
+  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+
+    .background {
+        background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
+        background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+     }
+
+    html {
+        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Apila las secciones verticalmente */
+        height: auto; /* Ajusta la altura según el contenido */
+    }
+
+    .middle-section {
+        display: none; /* Oculta la sección central */
+    }
+
+    .left-section {
+        width: 100%; /* Ocupa todo el ancho */
+        margin-bottom: 20px; /* Espacio claro debajo de la sección 1 */
+        position: relative; /* Asegura que siga el flujo natural */
+        z-index: 1; /* Asegura que esté encima de cualquier fondo */
+    }
+
+    .left-section .text-container {
+        position: static; /* Elimina el posicionamiento absoluto */
+        top: auto; /* Deja que siga el flujo natural */
+        padding: 0 20px; /* Ajusta el espaciado lateral */
+        padding-top: 15%; /* Espaciado superior como porcentaje de la altura del contenedor */
+    }
+
+    .right-section {
+        width: 100%; /* Ocupa todo el ancho */
+        height: auto; /* Ajusta la altura según el contenido */
+        margin-top: 20px; /* Asegura separación debajo de la sección 1 */
+        padding: 10px; /* Espacio interno */
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        position: relative; /* Asegura que siga el flujo natural */
+        z-index: auto; /* Evita interferencias con otras secciones */
+    }
+
+
+      .left-section a {
+        font-size: 1.5rem; /* Reduce el tamaño de las letras */
+      }
+
+      .left-section a span {
+        font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
+        font-style: italic;
+      }
+
+   } /* FIN orientación vertical */
+
+
+
+    /* Reducir el tamaño de la fuente cuando el móvil está en posición HORIZONTAL */
+    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
+        
+    html {
+        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+      }
+
+
+    .left-section .text-container {
+        position: static; /* Elimina el posicionamiento absoluto */
+        top: auto; /* Deja que siga el flujo natural */
+        padding: 0 20px; /* Ajusta el espaciado lateral */    
+        padding-top: 30% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+     }
+
+    .left-section a {
+        font-size: 0.5rem !important; /* Reduce el tamaño de las letras */
+        line-height: 1.2; /* Ajusta la separación entre filas */
+        margin-bottom: 0.5em; /* Espacio inferior más reducido */
+      }
+
+    .left-section a span {
+        font-size: 0.4rem !important; /* Tamaño reducido para el texto secundario */
+        font-style: italic;
+      }
+
+    .right-section {
+        .right-section .texto-dinamico-10,
+        .right-section .texto-dinamico-12,
+        .right-section .texto-dinamico-09 {
+        font-size: 0.3rem !important; /* Ajusta el tamaño específico */
+      }
+        font-size: 0.3rem !important; /* Ajusta el tamaño específico */
+  /*    inherit: none;
+        white-space: normal; /* Asegura que no haya limitaciones */
+        overflow: visible; /* Previene problemas de corte */         */
+    }
+
+
+   } /* FIN orientación horizontal */
+
+
+} /* Fin query para móviles */
+
+
+
+ /*   .background {
+        background-image: url('fondo-movil.jpg'); /* Imagen para móviles */
+        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+    } */
+
+
+
+   /* Ajuste para pantallas grandes (ordenadores) */
+        @media (min-width: 1024px) {
+            .right-section {
+                font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
 
-        .container {
-            flex-direction: column;
-            height: auto;
-        }
-
-        .left-section {
-            width: 100%;
-            padding: 10px;
-        }
-
-        .left-section a {
-            font-size: 1.2rem;
-            line-height: 1.4;
-        }
-
-        .middle-section {
-            display: none;
-        }
-
-        .right-section {
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-        }
-
-        .right-section img {
-            max-width: 100%;
-            height: auto;
-        }
     }
 
-
-
-    /* Forzar la visualización vertical en móvil */
-
-   @media (max-width: 768px) and (orientation: landscape) {
-       html {
-        transform: rotate(-90deg);
-        transform-origin: center center;
-        width: 100vh;
-        height: 100vw;
-        overflow: hidden;
-        position: absolute;
-    }
-
-    body {
-        transform: rotate(90deg);
-        transform-origin: center center;
-        width: 100vw;
-        height: 100vh;
-    }
 }
 
 
-    </style>
+</style>
 </head>
+
+
 <body>
     <!-- Fondo -->
     <div class="background"></div>
@@ -226,10 +317,12 @@
             const textoDiv = document.getElementById('texto');
             if (seccion === 'texto1') {
                 textoDiv.innerHTML = `
+                <div style="font-size: 1rem;">
                 <br><p>Te despiertas en el sótano desconocido de una ciudad anónima y a los pocos segundos ya hay alguien que intenta matarte. ¿Qué está ocurriendo? ¡Ni siquiera recuerdas quién eres! No importa, tienes todo el tiempo del mundo para averiguarlo. Y es literal porque, cuando amanece de nuevo tras una loca jornada y vuelves a despertar en el mismo sótano, cuando el mitin de la tarde y el fiestón de anoche se repiten y la gente interpreta idénticos diálogos como en una obra de teatro, comprendes que se está reproduciendo el mismo día sin cesar, en bucle. Sí, como la jodida Marmota de Bill Murray.</p>
                 <p>En este recurrente disparate, todos son Sísifo y la muerte acecha de infinitas formas. Pero salvar el pellejo no basta: el Triunvirato, los diseñadores del Bucle, con su pequeño experimento han puesto en peligro la misma existencia. Así que te impones hallarlos a todos y detener esta locura, hurgar en sus secretos y romper el Bucle. Te toca salvar el universo. Algo que quizá le venga grande a quien no recuerda ni la talla de sus calzoncillos.</p>    `;
             } else if (seccion === 'texto2') {
                 textoDiv.innerHTML = `
+                <div style="font-size: 1rem;">
                 <p>Este delirante librojuego de investigación en el que tú eres el protagonista ofrece:</p>
                 <ul>
                     <li>Un inconfundible sabor a clásico, pero con mecánicas innovadoras y un febril diseño.</li>
@@ -243,6 +336,7 @@
                 </ul>`;
             } else if (seccion === 'texto3') {
                 textoDiv.innerHTML = `
+               <div style="font-size: 1.2rem;">
                 <br>
                 <h2>Material adicional</h2>
                 <ul>
@@ -254,7 +348,7 @@
                 </ul>`;
             } else if (seccion === 'texto4') {
                 textoDiv.innerHTML = `
-                <div style="font-size: 1rem;">
+                <div style="font-size: 0.9rem;">
                 <p><strong><em>El perpetrador</em></strong></p>
                 <p><b>Ramón Merino Collado</b>, incondicional devoto de la narrativa del asombro, es un escritor con varios libros publicados: <em>El teatro de los prodigios</em> (Grupo Ajec, 2012), <em>De monstruos y trincheras</em> (Espiral, 2014) y <em>Memorias Paganas</em> (Sur, 2017). Perteneció a la célebre asociación Nocte, en cuyo seno fue antologista y coautor de <em>Kaiju</em> (Saco de Huesos, 2019). También ha sido galardonado con varios premios literarios, como el Castillejo Benigno-Vaquero o el Palabras Agudas, y sus libros han cosechado un total de cuatro nominaciones a los prestigiosos Ignotus. El Bucle es su primer librojuego, y lo ha pasado tan bien diseñándolo que amenaza con perpetrar algunos más.</p>
                 <p><strong><em>Los compinches</em></strong></p>

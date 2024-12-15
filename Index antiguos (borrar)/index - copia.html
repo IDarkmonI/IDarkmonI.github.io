@@ -131,19 +131,18 @@
 
 /* DISPOSITIVOS MÓVILES */
 
-/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
-@media (max-width: 1024px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+/* Formato solo en dispositivos móviles */
+@media (max-width: 1024px) {     
+
+
+ /* Formato de móvil solo si lo sujetas en posición vertical */
+  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
      }
-  }
-
-
-
-/* MEDIA QUERY para dispositivos móviles */
-@media (max-width: 768px) {
 
     html {
         font-size: 4vw; /* Ajuste base para pantallas pequeñas */
@@ -170,6 +169,7 @@
         position: static; /* Elimina el posicionamiento absoluto */
         top: auto; /* Deja que siga el flujo natural */
         padding: 0 20px; /* Ajusta el espaciado lateral */
+        padding-top: 11%; /* Espaciado superior como porcentaje de la altura del contenedor */
     }
 
     .right-section {
@@ -182,14 +182,35 @@
         z-index: auto; /* Evita interferencias con otras secciones */
     }
 
+
+      .left-section a {
+        font-size: 2rem; /* Reduce el tamaño de las letras */
+      }
+
+      .left-section a span {
+        font-size: 1.9rem; /* Tamaño reducido para el texto secundario */
+        font-style: italic;
+      }
+
+   } /* Fin orientación vertical */
+
+
+
     /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
     @media (orientation: landscape) {
-        .left-section a {
-        font-size: 0.8rem; /* Reduce el tamaño de las letras */
+        
+    html {
+        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+    }
+
+    .left-section a {
+        font-size: 0.5rem; /* Reduce el tamaño de las letras */
+        line-height: 1.2; /* Ajusta la separación entre filas */
+        margin-bottom: 0.5em; /* Espacio inferior más reducido */
       }
 
     .left-section a span {
-        font-size: 0.5rem; /* Tamaño reducido para el texto secundario */
+        font-size: 0.4rem; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
@@ -255,6 +276,7 @@
             const textoDiv = document.getElementById('texto');
             if (seccion === 'texto1') {
                 textoDiv.innerHTML = `
+                <div style="font-size: 1rem;">
                 <br><p>Te despiertas en el sótano desconocido de una ciudad anónima y a los pocos segundos ya hay alguien que intenta matarte. ¿Qué está ocurriendo? ¡Ni siquiera recuerdas quién eres! No importa, tienes todo el tiempo del mundo para averiguarlo. Y es literal porque, cuando amanece de nuevo tras una loca jornada y vuelves a despertar en el mismo sótano, cuando el mitin de la tarde y el fiestón de anoche se repiten y la gente interpreta idénticos diálogos como en una obra de teatro, comprendes que se está reproduciendo el mismo día sin cesar, en bucle. Sí, como la jodida Marmota de Bill Murray.</p>
                 <p>En este recurrente disparate, todos son Sísifo y la muerte acecha de infinitas formas. Pero salvar el pellejo no basta: el Triunvirato, los diseñadores del Bucle, con su pequeño experimento han puesto en peligro la misma existencia. Así que te impones hallarlos a todos y detener esta locura, hurgar en sus secretos y romper el Bucle. Te toca salvar el universo. Algo que quizá le venga grande a quien no recuerda ni la talla de sus calzoncillos.</p>    `;
             } else if (seccion === 'texto2') {
@@ -285,7 +307,7 @@
                 </ul>`;
             } else if (seccion === 'texto4') {
                 textoDiv.innerHTML = `
-                <div style="font-size: 0.8rem;">
+                <div style="font-size: 0.9rem;">
                 <p><strong><em>El perpetrador</em></strong></p>
                 <p><b>Ramón Merino Collado</b>, incondicional devoto de la narrativa del asombro, es un escritor con varios libros publicados: <em>El teatro de los prodigios</em> (Grupo Ajec, 2012), <em>De monstruos y trincheras</em> (Espiral, 2014) y <em>Memorias Paganas</em> (Sur, 2017). Perteneció a la célebre asociación Nocte, en cuyo seno fue antologista y coautor de <em>Kaiju</em> (Saco de Huesos, 2019). También ha sido galardonado con varios premios literarios, como el Castillejo Benigno-Vaquero o el Palabras Agudas, y sus libros han cosechado un total de cuatro nominaciones a los prestigiosos Ignotus. El Bucle es su primer librojuego, y lo ha pasado tan bien diseñándolo que amenaza con perpetrar algunos más.</p>
                 <p><strong><em>Los compinches</em></strong></p>

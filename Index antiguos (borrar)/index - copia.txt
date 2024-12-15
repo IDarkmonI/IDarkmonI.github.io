@@ -131,19 +131,18 @@
 
 /* DISPOSITIVOS MÓVILES */
 
-/* Cargar la imagen de móvil solo si lo sujetas en posición vertical */
-@media (max-width: 1024px) and (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+/* Formato solo en dispositivos móviles */
+@media (max-width: 1024px) {     
+
+
+ /* Formato de móvil solo si lo sujetas en posición vertical */
+  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: cover; /* Escala para cubrir toda la pantalla */
+        background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
      }
-  }
-
-
-
-/* MEDIA QUERY para dispositivos móviles */
-@media (max-width: 768px) {
 
     html {
         font-size: 4vw; /* Ajuste base para pantallas pequeñas */
@@ -170,7 +169,7 @@
         position: static; /* Elimina el posicionamiento absoluto */
         top: auto; /* Deja que siga el flujo natural */
         padding: 0 20px; /* Ajusta el espaciado lateral */
-        padding-top: 10%; /* Espaciado superior como porcentaje de la altura del contenedor */
+        padding-top: 15%; /* Espaciado superior como porcentaje de la altura del contenedor */
     }
 
     .right-section {
@@ -183,18 +182,53 @@
         z-index: auto; /* Evita interferencias con otras secciones */
     }
 
-    /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
-    @media (orientation: landscape) {
-        .left-section a {
-        font-size: 0.7rem; /* Reduce el tamaño de las letras */
+
+      .left-section a {
+        font-size: 1.5rem; /* Reduce el tamaño de las letras */
       }
 
-    .left-section a span {
-        font-size: 0.5rem; /* Tamaño reducido para el texto secundario */
+      .left-section a span {
+        font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
+   } /* FIN orientación vertical */
+
+
+
+    /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
+    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
+        
+    html {
+        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
     }
+
+
+    .left-section .text-container {
+   /*   position: static; /* Elimina el posicionamiento absoluto */
+        top: auto; /* Deja que siga el flujo natural */
+        padding: 0 20px; /* Ajusta el espaciado lateral */    */
+        padding-top: 13%; /* Espaciado superior como porcentaje de la altura del contenedor */
+
+    .left-section a {
+        font-size: 0.1rem !important; /* Reduce el tamaño de las letras */
+        line-height: 1.2; /* Ajusta la separación entre filas */
+        margin-bottom: 0.5em; /* Espacio inferior más reducido */
+      }
+
+    .left-section a span {
+        font-size: 0.08rem !important; /* Tamaño reducido para el texto secundario */
+        font-style: italic;
+      }
+
+    .right-section {
+        font-size: 1vw !important; /* Sobrescribe cualquier tamaño definido posteriormente */
+        all: unset; /* Elimina estilos heredados */
+    }
+
+
+    } /* FIN orientación horizontal */
+
 
   } /* Fin query para móviles */
 
