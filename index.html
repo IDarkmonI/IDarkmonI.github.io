@@ -243,11 +243,13 @@
      .right-section .texto-dinamico-10,
      .right-section .texto-dinamico-12,
      .right-section .texto-dinamico-09 {
-        font-size: 0.3rem !important; /* Ajusta el tamaño específico */
-      }
+      all: unset; /* Restablece todos los estilos heredados o en línea */ 
        font-size: 0.3rem !important; /* Ajusta el tamaño específico */
- 
-    }
+      }
+     .right-section { 
+           all: unset; /* Restablece todos los estilos heredados o en línea */ 
+           font-size: 0.3rem !important; /* Ajusta el tamaño específico */
+      } 
 
 
    } /* FIN orientación horizontal */
