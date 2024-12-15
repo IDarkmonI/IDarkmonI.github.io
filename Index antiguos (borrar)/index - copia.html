@@ -20,6 +20,8 @@
             font-size: 1.6rem; /* Escala relativa al tamaño base */
         }
 
+
+
         /* Fondo con imagen */
         .background {
             position: fixed;
@@ -101,6 +103,22 @@
            height: 100%; /* Ocupa toda la altura de la pantalla */
         }
 
+        /* Tamaños de texto empleados posteriormente en la sección derecha */
+        .right-section .texto-dinamico-10 {
+           font-size: 1rem;
+        }
+
+        .right-section .texto-dinamico-12 {
+           font-size: 1.2rem;
+        }
+
+        .right-section .texto-dinamico-09 {
+           font-size: 0.9rem;
+        }
+
+
+
+
         /* Estilo de enlaces */
         a {
             color: white;
@@ -135,7 +153,7 @@
 @media (max-width: 1024px) {     
 
 
- /* Formato de móvil solo si lo sujetas en posición vertical */
+ /* Formato de móvil solo si lo sujetas en posición VERTICAL */
   @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
 
     .background {
@@ -169,7 +187,7 @@
         position: static; /* Elimina el posicionamiento absoluto */
         top: auto; /* Deja que siga el flujo natural */
         padding: 0 20px; /* Ajusta el espaciado lateral */
-        padding-top: 11%; /* Espaciado superior como porcentaje de la altura del contenedor */
+        padding-top: 15%; /* Espaciado superior como porcentaje de la altura del contenedor */
     }
 
     .right-section {
@@ -184,39 +202,59 @@
 
 
       .left-section a {
-        font-size: 2rem; /* Reduce el tamaño de las letras */
+        font-size: 1.5rem; /* Reduce el tamaño de las letras */
       }
 
       .left-section a span {
-        font-size: 1.9rem; /* Tamaño reducido para el texto secundario */
+        font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
-   } /* Fin orientación vertical */
+   } /* FIN orientación vertical */
 
 
 
-    /* Reducir el tamaño de la fuente cuando el móvil está en posición horizontal */
-    @media (orientation: landscape) {
+    /* Reducir el tamaño de la fuente cuando el móvil está en posición HORIZONTAL */
+    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
         
     html {
-        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
-    }
+        font-size: 2vw; /* Ajuste base para pantallas pequeñas */
+      }
+
+
+    .left-section .text-container {
+        position: static; /* Elimina el posicionamiento absoluto */
+        top: auto; /* Deja que siga el flujo natural */
+        padding: 0 20px; /* Ajusta el espaciado lateral */    
+        padding-top: 30% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+     }
 
     .left-section a {
-        font-size: 0.5rem; /* Reduce el tamaño de las letras */
+        font-size: 1rem !important; /* Reduce el tamaño de las letras */
         line-height: 1.2; /* Ajusta la separación entre filas */
         margin-bottom: 0.5em; /* Espacio inferior más reducido */
       }
 
     .left-section a span {
-        font-size: 0.4rem; /* Tamaño reducido para el texto secundario */
+        font-size: 0.9rem !important; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
-    }
+      .right-section {
+            width: 60%;
+      }
 
-  } /* Fin query para móviles */
+     .right-section .texto-dinamico-10,
+     .right-section .texto-dinamico-12,
+     .right-section .texto-dinamico-09 {
+      all: unset; /* Restablece todos los estilos heredados o en línea */ 
+       font-size: 0.1rem !important; /* Ajusta el tamaño específico */
+      }
+
+   } /* FIN orientación horizontal */
+
+
+} /* Fin query para móviles */
 
 
 

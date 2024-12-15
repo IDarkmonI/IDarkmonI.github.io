@@ -93,7 +93,7 @@
             padding: 20px;
             padding-right: 0; /* Elimina cualquier separación con el borde derecho */
             padding-top: 20px; /* El texto comienza casi al borde superior */
-            background: rgba(0, 0, 0, 0.7); /* Fondo negro con 30% de transparencia */
+            background: rgba(0, 0, 0, 0.75); /* Fondo negro con 25% de transparencia */
             overflow-y: auto;
             font-size: 1.2rem; /* Tamaño del texto ligeramente mayor */
            line-height: 1.8; /* Espaciado entre líneas para mejorar la legibilidad */
@@ -202,11 +202,11 @@
 
 
       .left-section a {
-        font-size: 1.5rem; /* Reduce el tamaño de las letras */
+        font-size: 1.4rem; /* Reduce el tamaño de las letras */
       }
 
       .left-section a span {
-        font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
+        font-size: 1.1rem; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
@@ -226,7 +226,7 @@
         position: static; /* Elimina el posicionamiento absoluto */
         top: auto; /* Deja que siga el flujo natural */
         padding: 0 20px; /* Ajusta el espaciado lateral */    
-        padding-top: 30% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        padding-top: 25% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
      }
 
     .left-section a {
@@ -240,8 +240,8 @@
         font-style: italic;
       }
 
-      .right-section {
-            width: 60%;
+      .right-section {   /* La sección derecha ocupa un poco más que en ordenador */
+            width: 40%;
       }
 
      .right-section .texto-dinamico-10,
@@ -304,7 +304,7 @@
         <!-- Tercera parte -->
         <div class="right-section" id="texto">
             <!-- Texto de la Sección 1 mostrado por defecto -->
-            <br><br> <div style="text-align: center;"> <img src="portada.jpg" alt="Portada del librojuego El Bucle" style="width: 100%; max-width: 500px;"> </div> 
+            <br><br> <div style="text-align: center;"> <img src="portada.jpg" alt="Portada del librojuego El Bucle" style="width: 70%; max-width: 500px;"> </div> 
         </div>
     </div>
 
@@ -334,7 +334,6 @@
             } else if (seccion === 'texto3') {
                 textoDiv.innerHTML = `
                <div style="font-size: 1.2rem;">
-                <br>
                 <h2>Material adicional</h2>
                 <ul>
                     <li><a href="El_Bucle_HIB.pdf" target="_blank">HOJA DE PERSONAJE (básica)</a></li>
