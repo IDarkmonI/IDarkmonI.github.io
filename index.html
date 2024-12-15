@@ -240,9 +240,10 @@
 
     .right-section {
         font-size: 0.4rem !important; /* Sobrescribe cualquier tamaño definido posteriormente */
-        inherit: none;
+/*        inherit: none;   */
+        all: unset;
         white-space: normal; /* Asegura que no haya limitaciones */
-        overflow: visible; /* Previene problemas de corte */
+/*        overflow: visible;  */
     }
 
 
@@ -301,8 +302,7 @@
         function mostrarTexto(seccion) {
             const textoDiv = document.getElementById('texto');
             if (seccion === 'texto1') {
-                textoDiv.innerHTML = `
-                
+                textoDiv.innerHTML = `            
                 <div class="texto-dinamico-10">
                 <br><p>Te despiertas en el sótano desconocido de una ciudad anónima y a los pocos segundos ya hay alguien que intenta matarte. ¿Qué está ocurriendo? ¡Ni siquiera recuerdas quién eres! No importa, tienes todo el tiempo del mundo para averiguarlo. Y es literal porque, cuando amanece de nuevo tras una loca jornada y vuelves a despertar en el mismo sótano, cuando el mitin de la tarde y el fiestón de anoche se repiten y la gente interpreta idénticos diálogos como en una obra de teatro, comprendes que se está reproduciendo el mismo día sin cesar, en bucle. Sí, como la jodida Marmota de Bill Murray.</p>
                 <p>En este recurrente disparate, todos son Sísifo y la muerte acecha de infinitas formas. Pero salvar el pellejo no basta: el Triunvirato, los diseñadores del Bucle, con su pequeño experimento han puesto en peligro la misma existencia. Así que te impones hallarlos a todos y detener esta locura, hurgar en sus secretos y romper el Bucle. Te toca salvar el universo. Algo que quizá le venga grande a quien no recuerda ni la talla de sus calzoncillos.</p>    `;
