@@ -93,7 +93,7 @@
             padding: 20px;
             padding-right: 0; /* Elimina cualquier separación con el borde derecho */
             padding-top: 20px; /* El texto comienza casi al borde superior */
-            background: rgba(0, 0, 0, 0.7); /* Fondo negro con 30% de transparencia */
+            background: rgba(0, 0, 0, 0.75); /* Fondo negro con 25% de transparencia */
             overflow-y: auto;
             font-size: 1.2rem; /* Tamaño del texto ligeramente mayor */
            line-height: 1.8; /* Espaciado entre líneas para mejorar la legibilidad */
@@ -240,7 +240,7 @@
         font-style: italic;
       }
 
-      .right-section {
+      .right-section {   /* La sección derecha ocupa un poco más que en ordenador */
             width: 40%;
       }
 
@@ -334,7 +334,7 @@
             } else if (seccion === 'texto3') {
                 textoDiv.innerHTML = `
                <div style="font-size: 1.2rem;">
-                <br>
+                /* <br> */
                 <h2>Material adicional</h2>
                 <ul>
                     <li><a href="El_Bucle_HIB.pdf" target="_blank">HOJA DE PERSONAJE (básica)</a></li>
