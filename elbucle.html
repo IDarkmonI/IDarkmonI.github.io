@@ -15,6 +15,7 @@
 
         body {
             margin: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
             color: white;
             font-size: 1.6rem; /* Escala relativa al tamaño base */
@@ -45,27 +46,29 @@
         /* Primera parte: sección izquierda */
         .left-section .text-container {
             position: fixed;
-            top: 25%; /* Cambia este porcentaje para ajustar la altura inicial */
+            top: 30%; /* Cambia este porcentaje para ajustar la altura inicial */
             left: 0;
             right: 0;
             padding: 0 40px; /* Mantiene sangría lateral */
+            padding-left: 8%;
         }
 
         .left-section h1 {
             font-size: 2.5rem;
              margin: 0; /* Elimina márgenes no deseados */
              padding-top: 5vh; /* Ajusta este valor para definir el punto de inicio */
-        /*    margin-bottom: 20px;  */
+        /*    margin-bottom: 40px;  */
             font-weight: bold;
         }
 
         .left-section a {
+            display: inline-block; /* Hace que el borde solo rodee el contenido */
             font-size: 1.5rem; /* Tamaño para el texto principal */
             font-weight: bold;
             margin-bottom: 20px; 
             display: block;
             line-height: 1.5;
-        text-shadow:         /*Bordes del texto */
+   /*   text-shadow:         /*Bordes del texto */
         -1px -1px 0 #000,  
          1px -1px 0 #000,  
         -1px  1px 0 #000,  
@@ -73,8 +76,30 @@
         -2px -2px 0 #000,  
          2px -2px 0 #000,  
         -2px  2px 0 #000,  
-         2px  2px 0 #000;
-        }
+         2px  2px 0 #000;    */
+       
+        /* Def del borde de los botones */
+        color: white; /* Color del texto */
+        text-decoration: none; /* Sin subrayado */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        margin: 12px 8;
+        padding: 3px 7px; /* Espaciado interno para el botón */
+        border: 2px solid transparent; 
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para el botón */
+        box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
+        transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
+        max-width: max-content; /* Ajusta el ancho al contenido */
+
+  }
+
+
+   .left-section a:hover {
+      background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al pasar el ratón */
+      border-color: rgba(255, 255, 255, 1); /* Borde completamente opaco */
+      text-decoration: underline; /* Subrayado al pasar el ratón */
+  }
+
 
         .left-section a span {
             font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
@@ -149,21 +174,38 @@
 
 /* DISPOSITIVOS MÓVILES */
 
-/* Formato solo en dispositivos móviles */
-@media (max-width: 1024px) {     
-
-
  /* Formato de móvil solo si lo sujetas en posición VERTICAL */
-  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+  @media (max-width: 1024px) and (orientation: portrait), (max-width: 1024px) and (max-aspect-ratio: 1/1) {     
+
+    body {
+        background-color: black !important; /* Asegura el negro como fondo base */
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden; /* Previene desplazamiento lateral no deseado */
+    }
 
     .background {
+        position: absolute; /* Permite que el fondo se desplace con el contenido */
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
-        background-position: center; /* Centra la imagen */
+        background-size: 100% auto !important; /* Escala para cubrir toda la pantalla */
+        background-position: center top; /* Centra la imagen */
+        background-color: black; /* Fondo negro debajo de la imagen */
+        width: 100%; height: auto;   
+        min-height: 100%; /* Asegura que siempre tenga suficiente altura */
+        z-index: -1; /* Asegura que el fondo no tape el contenido */
      }
 
+    .left-section a:nth-of-type(4) { /* Selecciona la cuarta opción: CRÉDITOS */
+        margin-left: 40%; /* Aumenta el margen a la izquierda */
+    }
+
+
     html {
-        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+        font-size: 5vw; /* Ajuste base para pantallas pequeñas */
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden; /* Previene desplazamiento lateral no deseado */
+
     }
 
     .container {
@@ -191,9 +233,16 @@
     }
 
     .right-section {
+
+    box-sizing: border-box; /* Asegura que padding y borde no afecten el tamaño total */
+    width: 100%; /* Asegura que el ancho ocupe todo el espacio disponible */
+    padding-right: 15px; /* Espaciado interno suficiente */
+    overflow-x: hidden; /* Evita que el texto se desborde horizontalmente */
+
+
         width: 100%; /* Ocupa todo el ancho */
         height: auto; /* Ajusta la altura según el contenido */
-        margin-top: 20px; /* Asegura separación debajo de la sección 1 */
+        margin-top: 90px; /* Asegura separación debajo de la sección 1 */
         padding: 10px; /* Espacio interno */
         font-size: 1rem; /* Ajusta el tamaño del texto */
         position: relative; /* Asegura que siga el flujo natural */
@@ -202,7 +251,7 @@
 
 
       .left-section a {
-        font-size: 1.4rem; /* Reduce el tamaño de las letras */
+        font-size: 1.1rem; /* Reduce el tamaño de las letras */
       }
 
       .left-section a span {
@@ -210,29 +259,37 @@
         font-style: italic;
       }
 
-   } /* FIN orientación vertical */
+
+   } /* FIN orientación vertical móviles */
 
 
 
     /* Reducir el tamaño de la fuente cuando el móvil está en posición HORIZONTAL */
-    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
+    @media (max-width: 1024px) and (orientation: landscape), (max-width: 1024px) and (min-aspect-ratio: 4/3) {
         
     html {
         font-size: 2vw; /* Ajuste base para pantallas pequeñas */
       }
 
 
+      .left-section h1 {
+              padding-top: 0vh; /* Ajusta este valor para definir el punto de inicio */
+       }
+
+
     .left-section .text-container {
-        position: fixed; /* Elimina el posicionamiento absoluto */
- /*       top: auto; /* Deja que siga el flujo natural */   */
-        padding: 0 10px; /* Ajusta el espaciado lateral */    
+        top 1% !important;    /* Ajusta el margen superior */
+        position: fixed; /* Fija el texto para que no se mueva */
+        padding: 0 !important; /* Ajusta el espaciado lateral */
+        padding-left: 6% !important; /* Sangría específica para móviles en horizontal */    
         padding-top: 0% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
      }
 
     .left-section a {
-        font-size: 1rem !important; /* Reduce el tamaño de las letras */
+        font-size: 1.1rem !important; /* Reduce el tamaño de las letras */
         line-height: 1.2; /* Ajusta la separación entre filas */
-        margin-bottom: 0.5em; /* Espacio inferior más reducido */
+        margin-bottom: 0.6em; /* Espacio inferior más reducido */
       }
 
     .left-section a span {
@@ -251,10 +308,7 @@
        font-size: 0.1rem !important; /* Ajusta el tamaño específico */
       }
 
-   } /* FIN orientación horizontal */
-
-
-} /* Fin query para móviles */
+   } /* FIN orientación horizontal móviles */
 
 
 
@@ -267,7 +321,7 @@
 
 
    /* Ajuste para pantallas grandes (ordenadores) */
-        @media (min-width: 1024px) {
+        @media (min-width: 1025px) {
             .right-section {
                 font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
@@ -292,10 +346,10 @@
          <div class="text-container">
             <!-- Línea vacía -->
             <h1></h1>
-            <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span> (¿Pero de qué va esta locura?)</span></a>
-            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span> (Véndeme El Bucle, anda)</span></a>
-            <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span> (¡Quiero complementos!)</span></a>
-            <a href="#" onclick="mostrarTexto('texto4')"> CRÉDITOS<br><span> (Los locos que han diseñado todo esto)</span></a>
+            <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto4')"> CRÉDITOS<br><span></span></a>
         </div>
        </div>
         <!-- Segunda parte (vacía) -->
@@ -304,7 +358,7 @@
         <!-- Tercera parte -->
         <div class="right-section" id="texto">
             <!-- Texto de la Sección 1 mostrado por defecto -->
-            <br><br> <div style="text-align: center;"> <img src="portada.jpg" alt="Portada del librojuego El Bucle" style="width: 70%; max-width: 500px;"> </div> 
+            <br><div style="text-align: center;"> <img src="portada.jpg" alt="Portada del librojuego El Bucle" style="width: 60%; max-width: 500px;"> </div> 
         </div>
     </div>
 
