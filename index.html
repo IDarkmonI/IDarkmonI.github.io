@@ -184,7 +184,7 @@
 
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: 100% auto; /* Escala para cubrir toda la pantalla */
+        background-size: 100% auto !important; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
         background-color: black; /* Fondo negro debajo de la imagen */
         position: absolute; /* Permite que el fondo se desplace con el contenido */
@@ -224,7 +224,7 @@
     .right-section {
         width: 100%; /* Ocupa todo el ancho */
         height: auto; /* Ajusta la altura según el contenido */
-        margin-top: 120px; /* Asegura separación debajo de la sección 1 */
+        margin-top: 100px; /* Asegura separación debajo de la sección 1 */
         padding: 10px; /* Espacio interno */
         font-size: 1rem; /* Ajusta el tamaño del texto */
         position: relative; /* Asegura que siga el flujo natural */
@@ -256,15 +256,15 @@
     .left-section .text-container {
         position: fixed; /* Fija el texto para que no se mueva */
         padding: 0 !important; /* Ajusta el espaciado lateral */
-        padding-left: 10px !important; /* Sangría específica para móviles en horizontal */    
+        padding-left: 20px !important; /* Sangría específica para móviles en horizontal */    
         padding-top: 0% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
         box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
      }
 
     .left-section a {
         font-size: 1rem !important; /* Reduce el tamaño de las letras */
-        line-height: 1.3; /* Ajusta la separación entre filas */
-        margin-bottom: 0.8em; /* Espacio inferior más reducido */
+        line-height: 1.2; /* Ajusta la separación entre filas */
+        margin-bottom: 0.6em; /* Espacio inferior más reducido */
       }
 
     .left-section a span {
