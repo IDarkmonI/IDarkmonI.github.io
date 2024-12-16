@@ -44,8 +44,8 @@
 
         /* Primera parte: sección izquierda */
         .left-section .text-container {
-            position: absolute;
-            top: 25%; /* Cambia este porcentaje para ajustar la altura inicial */
+            position: fixed;
+            top: 30%; /* Cambia este porcentaje para ajustar la altura inicial */
             left: 0;
             right: 0;
             padding: 0 40px; /* Mantiene sangría lateral */
@@ -93,7 +93,7 @@
             padding: 20px;
             padding-right: 0; /* Elimina cualquier separación con el borde derecho */
             padding-top: 20px; /* El texto comienza casi al borde superior */
-            background: rgba(0, 0, 0, 0.7); /* Fondo negro con 30% de transparencia */
+            background: rgba(0, 0, 0, 0.75); /* Fondo negro con 25% de transparencia */
             overflow-y: auto;
             font-size: 1.2rem; /* Tamaño del texto ligeramente mayor */
            line-height: 1.8; /* Espaciado entre líneas para mejorar la legibilidad */
@@ -101,22 +101,21 @@
            top: 0; /* Empieza desde el borde superior del contenedor */
            right: 0; /* Se alinea al borde derecho */
            height: 100%; /* Ocupa toda la altura de la pantalla */
-
+        }
 
         /* Tamaños de texto empleados posteriormente en la sección derecha */
-        .texto-dinamico-10 {
+        .right-section .texto-dinamico-10 {
            font-size: 1rem;
         }
 
-        .texto-dinamico-12 {
+        .right-section .texto-dinamico-12 {
            font-size: 1.2rem;
         }
 
-        .texto-dinamico-09 {
+        .right-section .texto-dinamico-09 {
            font-size: 0.9rem;
         }
 
-      }  /* FIN right-section */
 
 
 
@@ -150,17 +149,14 @@
 
 /* DISPOSITIVOS MÓVILES */
 
-/* Formato solo en dispositivos móviles */
-@media (max-width: 1024px) {     
-
-
  /* Formato de móvil solo si lo sujetas en posición VERTICAL */
-  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+  @media (max-width: 1024px) and (orientation: portrait), (max-width: 1024px) and (max-aspect-ratio: 1/1) {     
 
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
         background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
+        position: absolute; /* Permite que el fondo se desplace con el contenido */
      }
 
     html {
@@ -194,7 +190,7 @@
     .right-section {
         width: 100%; /* Ocupa todo el ancho */
         height: auto; /* Ajusta la altura según el contenido */
-        margin-top: 20px; /* Asegura separación debajo de la sección 1 */
+        margin-top: 120px; /* Asegura separación debajo de la sección 1 */
         padding: 10px; /* Espacio interno */
         font-size: 1rem; /* Ajusta el tamaño del texto */
         position: relative; /* Asegura que siga el flujo natural */
@@ -203,61 +199,57 @@
 
 
       .left-section a {
-        font-size: 1.5rem; /* Reduce el tamaño de las letras */
+        font-size: 1.4rem; /* Reduce el tamaño de las letras */
       }
 
       .left-section a span {
-        font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
+        font-size: 1.1rem; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
-   } /* FIN orientación vertical */
+   } /* FIN orientación vertical móviles */
 
 
 
     /* Reducir el tamaño de la fuente cuando el móvil está en posición HORIZONTAL */
-    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
+    @media (max-width: 1024px) and (orientation: landscape), (max-width: 1024px) and (min-aspect-ratio: 4/3) {
         
     html {
-        font-size: 4vw; /* Ajuste base para pantallas pequeñas */
+        font-size: 2vw; /* Ajuste base para pantallas pequeñas */
       }
 
 
     .left-section .text-container {
-        position: static; /* Elimina el posicionamiento absoluto */
-        top: auto; /* Deja que siga el flujo natural */
-        padding: 0 20px; /* Ajusta el espaciado lateral */    
-        padding-top: 30% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        position: fixed; /* Fija el texto para que no se mueva */
+        padding: 0 !important; /* Ajusta el espaciado lateral */
+        padding-left: 10px !important; /* Sangría específica para móviles en horizontal */    
+        padding-top: 0% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
      }
 
     .left-section a {
-        font-size: 0.5rem !important; /* Reduce el tamaño de las letras */
-        line-height: 1.2; /* Ajusta la separación entre filas */
-        margin-bottom: 0.5em; /* Espacio inferior más reducido */
+        font-size: 1rem !important; /* Reduce el tamaño de las letras */
+        line-height: 1.3; /* Ajusta la separación entre filas */
+        margin-bottom: 0.8em; /* Espacio inferior más reducido */
       }
 
     .left-section a span {
-        font-size: 0.4rem !important; /* Tamaño reducido para el texto secundario */
+        font-size: 0.9rem !important; /* Tamaño reducido para el texto secundario */
         font-style: italic;
       }
 
-    .right-section {
-        .right-section .texto-dinamico-10,
-        .right-section .texto-dinamico-12,
-        .right-section .texto-dinamico-09 {
-        font-size: 0.3rem !important; /* Ajusta el tamaño específico */
+      .right-section {   /* La sección derecha ocupa un poco más que en ordenador */
+            width: 40%;
       }
-        font-size: 0.3rem !important; /* Ajusta el tamaño específico */
-  /*    inherit: none;
-        white-space: normal; /* Asegura que no haya limitaciones */
-        overflow: visible; /* Previene problemas de corte */         */
-    }
 
+     .right-section .texto-dinamico-10,
+     .right-section .texto-dinamico-12,
+     .right-section .texto-dinamico-09 {
+      all: unset; /* Restablece todos los estilos heredados o en línea */ 
+       font-size: 0.1rem !important; /* Ajusta el tamaño específico */
+      }
 
-   } /* FIN orientación horizontal */
-
-
-} /* Fin query para móviles */
+   } /* FIN orientación horizontal móviles */
 
 
 
@@ -270,7 +262,7 @@
 
 
    /* Ajuste para pantallas grandes (ordenadores) */
-        @media (min-width: 1024px) {
+        @media (min-width: 1025px) {
             .right-section {
                 font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
@@ -295,10 +287,10 @@
          <div class="text-container">
             <!-- Línea vacía -->
             <h1></h1>
-            <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span> (¿Pero de qué va esta locura?)</span></a>
-            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span> (Véndeme El Bucle, anda)</span></a>
-            <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span> (¡Quiero complementos!)</span></a>
-            <a href="#" onclick="mostrarTexto('texto4')"> CRÉDITOS<br><span> (Los locos que han diseñado todo esto)</span></a>
+            <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto4')"> CRÉDITOS<br><span></span></a>
         </div>
        </div>
         <!-- Segunda parte (vacía) -->
@@ -307,7 +299,7 @@
         <!-- Tercera parte -->
         <div class="right-section" id="texto">
             <!-- Texto de la Sección 1 mostrado por defecto -->
-            <br><br> <div style="text-align: center;"> <img src="portada.jpg" alt="Portada del librojuego El Bucle" style="width: 100%; max-width: 500px;"> </div> 
+            <br><br> <div style="text-align: center;"> <img src="portada.jpg" alt="Portada del librojuego El Bucle" style="width: 70%; max-width: 500px;"> </div> 
         </div>
     </div>
 
@@ -337,7 +329,6 @@
             } else if (seccion === 'texto3') {
                 textoDiv.innerHTML = `
                <div style="font-size: 1.2rem;">
-                <br>
                 <h2>Material adicional</h2>
                 <ul>
                     <li><a href="El_Bucle_HIB.pdf" target="_blank">HOJA DE PERSONAJE (básica)</a></li>
