@@ -149,17 +149,14 @@
 
 /* DISPOSITIVOS MÓVILES */
 
-/* Formato solo en dispositivos móviles */
-@media (max-width: 1024px) {     
-
-
  /* Formato de móvil solo si lo sujetas en posición VERTICAL */
-  @media (orientation: portrait) and (max-aspect-ratio: 1/1) {     
+  @media (max-width: 1024px) and (orientation: portrait), (max-width: 1024px) and (max-aspect-ratio: 1/1) {     
 
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
         background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
+        position: absolute; /* Permite que el fondo se desplace con el contenido */
      }
 
     html {
@@ -210,12 +207,12 @@
         font-style: italic;
       }
 
-   } /* FIN orientación vertical */
+   } /* FIN orientación vertical móviles */
 
 
 
     /* Reducir el tamaño de la fuente cuando el móvil está en posición HORIZONTAL */
-    @media (orientation: landscape), (min-aspect-ratio: 4/3) {
+    @media (max-width: 1024px) and (orientation: landscape), (max-width: 1024px) and (min-aspect-ratio: 4/3) {
         
     html {
         font-size: 2vw; /* Ajuste base para pantallas pequeñas */
@@ -252,10 +249,7 @@
        font-size: 0.1rem !important; /* Ajusta el tamaño específico */
       }
 
-   } /* FIN orientación horizontal */
-
-
-} /* Fin query para móviles */
+   } /* FIN orientación horizontal móviles */
 
 
 
@@ -268,7 +262,7 @@
 
 
    /* Ajuste para pantallas grandes (ordenadores) */
-        @media (min-width: 1024px) {
+        @media (min-width: 1025px) {
             .right-section {
                 font-size: 0.62em !important; /* Reduce todo un % manteniendo proporciones */
             }
@@ -293,10 +287,10 @@
          <div class="text-container">
             <!-- Línea vacía -->
             <h1></h1>
-            <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span> (¿Pero de qué va esta locura?)</span></a>
-            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span> (Véndeme El Bucle, anda)</span></a>
-            <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span> (¡Quiero complementos!)</span></a>
-            <a href="#" onclick="mostrarTexto('texto4')"> CRÉDITOS<br><span> (Los locos que han diseñado todo esto)</span></a>
+            <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span></span></a>
+            <a href="#" onclick="mostrarTexto('texto4')"> CRÉDITOS<br><span></span></a>
         </div>
        </div>
         <!-- Segunda parte (vacía) -->

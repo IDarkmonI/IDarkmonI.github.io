@@ -223,10 +223,11 @@
 
 
     .left-section .text-container {
-        position: fixed; /* Elimina el posicionamiento absoluto */
- /*       top: auto; /* Deja que siga el flujo natural */   */
-        padding: 0 10px; /* Ajusta el espaciado lateral */    
+        position: fixed; /* Fija el texto para que no se mueva */
+        padding: 0 !important; /* Ajusta el espaciado lateral */
+        padding-left: 10px !important; /* Sangría específica para móviles en horizontal */    
         padding-top: 0% !important; /* Espaciado superior como porcentaje de la altura del contenedor */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
      }
 
     .left-section a {
