@@ -31,7 +31,7 @@
             width: 100%;
             height: 100%;
             background-image: url('fondo.jpg'); /* Cambia esto por el nombre de tu imagen */
-            background-size: cover;
+            background-size: contain;
             background-position: center;
             z-index: -1;
         }
@@ -185,10 +185,10 @@
     .background {
         position: absolute; /* Permite que el fondo se desplace con el contenido */
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: contain !important; /* Escala para cubrir toda la pantalla */   /* 100% auto */
+        background-size: 100% auto !important; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
         background-color: black; /* Fondo negro debajo de la imagen */
-        top: 0; left: 0; width: 100%; height: auto%;
+        top: 0; left: 0; width: 100%; height: 100%;
         z-index: -1; /* Asegura que el fondo no tape el contenido */
 
      }
