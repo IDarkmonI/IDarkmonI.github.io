@@ -233,6 +233,13 @@
     }
 
     .right-section {
+
+    box-sizing: border-box; /* Asegura que padding y borde no afecten el tamaño total */
+    width: 100%; /* Asegura que el ancho ocupe todo el espacio disponible */
+    padding-right: 15px; /* Espaciado interno suficiente */
+    overflow-x: hidden; /* Evita que el texto se desborde horizontalmente */
+
+
         width: 100%; /* Ocupa todo el ancho */
         height: auto; /* Ajusta la altura según el contenido */
         margin-top: 90px; /* Asegura separación debajo de la sección 1 */
