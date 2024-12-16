@@ -10,8 +10,6 @@
        /* Tamaño base flexible en html */
         html {
             font-size: 1vw; /* Tamaño de fuente base relativo al ancho del viewport */
-            margin: 0;
-            height: 100%;
         }
 
 
@@ -180,12 +178,13 @@
 
     body {
         background-color: black !important; /* Asegura el negro como fondo base */
-  /*    overflow-y: scroll; /* Activa el desplazamiento vertical */    */
+        height: 100%;
+        margin: 0;
     }
 
     .background {
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: 100% 100%; /* Escala para cubrir toda la pantalla */
+        background-size: 100% auto; /* Escala para cubrir toda la pantalla */
         background-position: center; /* Centra la imagen */
         background-color: black; /* Fondo negro debajo de la imagen */
         position: absolute; /* Permite que el fondo se desplace con el contenido */
@@ -193,6 +192,9 @@
 
     html {
         font-size: 5vw; /* Ajuste base para pantallas pequeñas */
+        height: 100%;
+        margin: 0;
+
     }
 
     .container {
