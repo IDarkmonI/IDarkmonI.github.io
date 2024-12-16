@@ -77,14 +77,23 @@
        
         color: white; /* Color del texto */
         text-decoration: none; /* Sin subrayado */
-        background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
-        padding: 10px 20px; /* Espaciado interno para el botón */
-        border-radius: 15px; /* Bordes redondeados */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        margin: 15px 10;
+        padding: 10px 15px; /* Espaciado interno para el botón */
+        border-radius: 10px; /* Bordes redondeados */
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para el botón */
+        box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
         transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
 
+  }
 
- }
+
+   .left-section a:hover {
+      background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al pasar el ratón */
+      border-color: rgba(255, 255, 255, 1); /* Borde completamente opaco */
+      text-decoration: underline; /* Subrayado al pasar el ratón */
+  }
+
 
         .left-section a span {
             font-size: 1.2rem; /* Tamaño reducido para el texto secundario */
