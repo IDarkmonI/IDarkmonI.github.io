@@ -180,17 +180,15 @@
         background-color: black !important; /* Asegura el negro como fondo base */
         height: 100%;
         margin: 0;
-       overflow: hidden; /* Previene desplazamiento lateral no deseado */
     }
 
     .background {
         position: absolute; /* Permite que el fondo se desplace con el contenido */
         background-image: url('fondo-movil.jpg') !important; /* Imagen para móviles */
-        background-size: 100% auto !important; /* Escala para cubrir toda la pantalla */
-        background-position: center top; /* Centra la imagen */
+        background-size: contain !important; /* Escala para cubrir toda la pantalla */   /* 100% auto */
+        background-position: center; /* Centra la imagen */
         background-color: black; /* Fondo negro debajo de la imagen */
-        width: 100%; height: auto;   
-        min-height: 100%; /* Asegura que siempre tenga suficiente altura */
+        top: 0; left: 0; width: 100%; height: auto%;
         z-index: -1; /* Asegura que el fondo no tape el contenido */
 
      }
@@ -199,7 +197,6 @@
         font-size: 5vw; /* Ajuste base para pantallas pequeñas */
         height: 100%;
         margin: 0;
-        overflow-x: hidden; /* Previene desplazamiento lateral no deseado */
 
     }
 
