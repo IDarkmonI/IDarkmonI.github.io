@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Héroe</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0a0d12; /* Fondo negro azulado */
+            color: #ffffff; /* Texto blanco */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: left;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+        }
+        h1, p {
+            margin: 0 0 20px;
+            font-size: 1.5rem; /* Tamaño de fuente más grande */
+            line-height: 1.6;
+        }
+        a {
+            color: #1e90ff; /* Color azul brillante */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            <strong>Punto de Héroe</strong> es una colección de librojuegos escritos y diseñados por los mejores autores del momento. Iniciada por Fernando Lafuente y Juan Pablo Fernández, la filosofía que subyace detrás de la colección es la de ofrecer calidad: buenas historias, pulcros diseños, ajustados sistemas de juego y obras rigurosamente medidas y testeadas para ofrecer una experiencia inolvidable. Pero lo mejor es dejar que los autores hablen por ellos mismos en este vídeo de presentación del primer número de la colección. ¡Ármate con un lápiz y un dado y bienvenido a Punto de Héroe!
+        </p>
+        <iframe src="https://www.youtube.com/embed/pWMTh5AG3bY" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

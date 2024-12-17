@@ -171,31 +171,6 @@
         }
 
 
-        /* Estilo del botón de retroceso */
-        .boton-retroceso {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 36px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            z-index: 999;
-            transition: background-color 0.3s;
-        }
-
-        .boton-retroceso:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-
 
 /* DISPOSITIVOS MÓVILES */
 
@@ -360,11 +335,6 @@
     <!-- Fondo -->
     <div class="background"></div>
 
-<!-- Botón de retroceso -->
-<div class="boton-retroceso" onclick="window.history.back();">
-    &#8592; <!-- Flecha izquierda -->
-</div>
-
     <!-- Contenedor principal -->
     <div class="container">
         <!-- Primera parte -->
@@ -384,8 +354,7 @@
         <!-- Tercera parte -->
         <div class="right-section" id="texto">
             <!-- Texto de la Sección 1 mostrado por defecto -->
-            <br><div style="text-align: center;"> <img src="portada-maleficum.jpg" alt="Portada del librojuego Maleficum" style="width: 60%; max-width: 500px;">
-             <BR> <a href="https://www.amazon.es/Maleficum-Punto-H%C3%A9roe-Pablo-Fern%C3%A1ndez/dp/B09FS9SBVL" target="_blank">LINK DE COMPRA</a></div> 
+            <br><div style="text-align: center;"> <img src="portada-maleficum.jpg" alt="Portada del librojuego Maleficum" style="width: 60%; max-width: 500px;"> </div> 
         </div>
     </div>
 
