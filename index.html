@@ -10,8 +10,8 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Fondo y opciones para pantallas grandes */
-        @media (min-width: 768px) {
+        /* Fondo y opciones para pantallas grandes o dispositivos en horizontal */
+        @media (min-width: 768px), (max-width: 1024px) and (orientation: landscape), (max-width: 1024px) and (min-aspect-ratio: 4/3) {
             body {
                 background: url('fondo-panoramico.jpg') no-repeat center center fixed;
                 background-size: cover;
