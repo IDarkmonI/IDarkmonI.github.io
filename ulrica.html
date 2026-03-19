@@ -373,7 +373,7 @@
             <!-- Línea vacía -->
             <h1></h1>
             <a href="#" onclick="mostrarTexto('texto1')"> SINOPSIS<br><span></span></a>
-   <!--     <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span></span></a>          -->
+            <a href="#" onclick="mostrarTexto('texto2')"> EL LIBROJUEGO<br><span></span></a> 
             <a href="#" onclick="mostrarTexto('texto3')"> MATERIAL ADICIONAL<br><span></span></a>
             <a href="#" onclick="mostrarTexto('texto4')"> LOS AUTORES<br><span></span></a>
         </div>
@@ -398,15 +398,19 @@
             if (seccion === 'texto1') {
                 textoDiv.innerHTML = `
                 <div style="font-size: 1rem;">
-                <br><p>En <i>Maleficum</i> tomas el papel de Marco Antonio Balbo, caballero romano de la Décima Legión del ejército del César. Tras largos años de fiel y abnegado servicio al Imperio, el soldado recibe una carta de su familia en la que se le informa del grave estado en el que se encuentra su padre. El tribuno le da permiso para abandonar el campamento y Marco se dirige de inmediato a su villa en Roma. Allí comprobará que el infortunio de su progenitor se ha hecho extensivo al resto de los suyos, y que fuerzas poderosas de naturaleza arcana operan en la sombra para abocarlos a un aciago desenlace. ¿Logrará desentrañar el misterio y salvar a su familia?</p>
-                <p>Ármate con lápiz, papel y dado, reúne todo tu ingenio y determinación, y guía a Marco Antonio con tus decisiones a lo largo de su vital misión en este librojuego de temática oscura ambientado en la antigua Roma.</p>    `;
+                <br><p>Tu nombre es Hilda: antaño, rebelde e incomprendida; ahora, respetada acólita de las Diosas Madres. A punto de unirte en sagrado enlace con Marco, tu prometido, tu pre-sente es gozoso y el futuro se antoja brillante.</p>
+<p>Por desgracia, el destino ha resuelto que tu dicha, y la de tu gente, se tornen pesadilla, que la luz se tiña de sangre. Un monje cristiano llamado Nuncto irrumpe en la ceremonia, rodeado de su séquito armado, y declara su intención de adueñarse de vuestras tierras. Por si esto no fuera suficiente, se mofa de tus creencias y pretende sustituirlas, mediante la fuerza, por su indolente fe.</p>
+<p>Los acontecimientos se precipitan y, tras una sorprendente revelación, te ves abocada a una peligrosa misión de venganza y reivindicación. Con la ayuda de Ulrica, la espada que te corresponde por derecho, y los aliados que logres unir a tu causa, estás dispuesta a reclamar lo que es tuyo. ¿Serás capaz de conseguirlo?</p>
+<p>En este librojuego, TÚ eres la heroína y tomas las decisiones. Enaltece tu CUERPO, aguza tu MENTE, afianza tu ESPÍRITU y triunfa en esta apasionante aventura épico-fantástica ambientada en la Hispania visigoda.</p>
+    `;
             } else if (seccion === 'texto2') {
                 textoDiv.innerHTML = `
                 <div style="font-size: 1rem;">
                 <p>Este emocionante librojuego de fantasía histórica en el que tú eres el protagonista ofrece:</p>
                 <ul>
-                    <li>Una trama de investigación, misterio, traiciones y acción en la que intervienen fuerzas oscuras; la Antigua Roma vista con otra perspectiva.</li>
-                    <li>Un sistema de juego medido con precisión milimétrica para que el librojuego sea desafiante sin llegar a frustrar.</li>
+                    <li>Una trama de traición, amor y venganza en la Hispania visigoda.</li>
+                    <li>Un mundo de libre exploración con diferentes formas de reunir tu ejército y culminar tu misión.</li>
+                    <li>Un sistema medido con precisión para que el librojuego sea desafiante sin llegar a frustrar.</li>
                     <li>Un diseño elegante junto a un texto narrativo de primer nivel.</li>
                 </ul>`;
             } else if (seccion === 'texto3') {
@@ -414,7 +418,8 @@
                <div style="font-size: 1.2rem;">
                 <h2>Material adicional</h2>
                 <ul>
-                    <li><a href="Maleficum-HP.pdf" target="_blank">HOJA DE PERSONAJE</a></li>
+                    <li><a href="HP-Ulrica.zip" target="_blank">HOJA DE PERSONAJE</a></li>
+                    <li><a href="Mapa-Ulrica.pdf" target="_blank">MAPA</a></li>
                 </ul>`;
             } else if (seccion === 'texto4') {
                 textoDiv.innerHTML = `
